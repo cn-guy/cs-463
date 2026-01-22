@@ -7,22 +7,39 @@
     <link rel="stylesheet" href="../_styles/styles.css" />
   </head>
   <body>
+    <!-- Add <main> tags - otherwise WAVE will give alert -->
+    <main>
     <h1>01 - Form</h1>
-    <form action="/submit">
-      <span>Name</span>
-      <input type="text" />
+    <!-- Form action is /submit by default but I removed it so it doesn't break the form -->
+    <form action="">
+      <!-- Explicit labeling for Name -->
+      <label for="name">Name</label>
+      <input type="text" id="name"/>
       <br /><br />
+      <!-- Implicit labeling for Email -->
       <label>
         Email
-        <input type="text" />
+        <input type="email" />
       </label>
       <br /><br />
-      <span>Favorite Character</span>
-      <div><input type="radio" id="spongebob" />Spongebob</div>
-      <div><input type="radio" id="patrick" />Patrick</div>
-      <div><input type="radio" id="sandy" />Sandy</div>
+      <!-- Use <fieldset> to specify all buttons grouped together -->
+      <fieldset>
+        <legend>Favorite Character</legend>
+        <input type="radio" name="character" id="spongebob" />
+        <label for="spongebob">Spongebob</label>
+        <br>
+        <input type="radio" name="character" id="patrick" />
+        <label for="patrick">Patrick</label>
+        <br>
+        <input type="radio" name="character" id="sandy" />
+        <label for="sandy">Sandy</label>
+        <br>
+      </fieldset>
+      </div>
       <br />
-      <button>Submit</button>
+      <!-- Can use buttons but important to specify input type and value -->
+      <input type="submit" value="Submit"/>
     </form>
+    </main>
   </body>
 </html>
