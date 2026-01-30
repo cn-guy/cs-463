@@ -14,7 +14,23 @@ li[class] {
   color: var(--red);
 }
 
+li[class$='og'] {color: var(--violet);}
+
+li[id='cat'] {color: var(--teal);}
+
+li[class='parrot'] {color: var(--green);}
+
+li[class='donkey'] {color: var(--royalblue);}
+
+li[class*=' '] {color: var(--royalblue);}
+
+
 /* Use descendant, child, and sibling selectors for the second part */
+
+/* ? Which color am I supposed to use? */
+.list-food li {color: var(--magenta)}
+.list-food > ol > li.first {color: var(--green);}
+.second + li {color: var(--royalblue)}
 
 section li {
   color: var(--green);
